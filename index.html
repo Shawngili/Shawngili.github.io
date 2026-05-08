@@ -1,137 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shawn — Developer Portfolio</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shawn — Portfolio</title>
 
-  <style>
-    :root {
-      --bg: #f8fafc;
-      --text: #1e293b;
-      --muted: #64748b;
-      --accent: #2563eb;
-      --card: #ffffff;
-    }
+<style>
+  :root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --accent: #38bdf8;
+    --accent2: #818cf8;
+    --radius: 14px;
+  }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Inter", system-ui, sans-serif;
-    }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", system-ui, sans-serif;
+  }
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-    /* HERO SECTION */
-    header {
-      padding: 4rem 1rem;
-      text-align: center;
-      background: linear-gradient(135deg, #1e3a8a, #2563eb);
-      color: white;
-    }
+  /* HERO */
+  header {
+    padding: 6rem 1rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--accent2), var(--accent));
+    color: white;
+    animation: fadeIn 1s ease-out;
+  }
 
-    header h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
+  header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
 
-    header p {
-      font-size: 1.2rem;
-      color: #e2e8f0;
-    }
+  header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
 
-    /* CONTENT WRAPPER */
-    main {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 2rem;
-      background: var(--card);
-      border-radius: 14px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      animation: fadeIn 0.6s ease-out;
-    }
+  /* MAIN WRAPPER */
+  .container {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 1rem;
+  }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+  /* SECTION CARD */
+  .card {
+    background: var(--card);
+    padding: 2rem;
+    border-radius: var(--radius);
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    animation: slideUp 0.7s ease-out;
+  }
 
-    h2 {
-      font-size: 1.6rem;
-      color: var(--accent);
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-    }
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+  }
 
-    p {
-      margin-bottom: 1.2rem;
-      color: var(--muted);
-    }
+  p, li {
+    color: var(--muted);
+    font-size: 1.05rem;
+  }
 
-    ul {
-      list-style: none;
-      padding-left: 0;
-      margin-bottom: 1.5rem;
-    }
+  ul {
+    margin-top: 0.5rem;
+    padding-left: 1.2rem;
+  }
 
-    ul li {
-      padding-left: 1.2rem;
-      position: relative;
-      margin-bottom: 0.5rem;
-    }
+  /* CONTACT */
+  .contact-info p {
+    margin-bottom: 0.5rem;
+  }
 
-    ul li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-      font-weight: bold;
-    }
+  /* ANIMATIONS */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
 
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-  </style>
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Shawn</h1>
-    <p>Developer • Builder • Problem Solver</p>
-  </header>
+<header>
+  <h1>Shawn</h1>
+  <p>Developer • Problem Solver • Builder</p>
+</header>
 
-  <main>
+<div class="container">
+
+  <!-- ABOUT ME -->
+  <section class="card">
     <h2>About Me</h2>
     <p>
-      I'm an ICS major at UH Mānoa with a passion for building clean, modern, and functional software.
-      I enjoy playing video games in my spare time.
+      <!-- FILL THIS IN -->
+      Write a short intro about yourself here.  
+      Example: “I’m an ICS major at UH Mānoa focused on building clean, modern software and improving my development skills through hands‑on work.”
     </p>
+  </section>
 
-    <h2>Projects</h2>
-    <p>
-      I am currently learning how to program using Java in ICS 111.
-    </p>
+  <!-- WHAT I DO -->
+  <section class="card">
+    <h2>What I Do</h2>
+    <ul>
+      <!-- FILL THESE IN -->
+      <li>Software development and coding practice</li>
+      <li>Building small tools, utilities, and experiments</li>
+      <li>Learning new technologies and improving fundamentals</li>
+      <li>Debugging, problem‑solving, and exploring new ideas</li>
+    </ul>
+  </section>
 
-    <h2>Current Focus</h2>
-    <p>
-      Improving my development skilss, building stronger fundamentals, and familarizing myself with more coding projects
-    </p>
-  </main>
+  <!-- SKILLS -->
+  <section class="card">
+    <h2>Skills & Tools</h2>
+    <ul>
+      <!-- FILL THESE IN -->
+      <li>Java, Python, HTML/CSS, JavaScript</li>
+      <li>Git, GitHub, VS Code, Linux</li>
+      <li>Debugging & problem‑solving</li>
+      <li>Software design fundamentals</li>
+    </ul>
+  </section>
 
-  <footer>
-    © 2026 — Shawn’s Portfolio
-  </footer>
+  <!-- CONTACT -->
+  <section class="card contact-info">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> <!-- your email here --></p>
+    <p><strong>GitHub:</strong> <!-- your GitHub link here --></p>
+    <p><strong>LinkedIn:</strong> <!-- your LinkedIn here --></p>
+    <p><strong>Location:</strong> Honolulu, HI</p>
+  </section>
+
+</div>
+
+<footer style="text-align:center; padding:2rem; color:#64748b;">
+  © 2026 — Shawn’s Portfolio
+</footer>
 
 </body>
 </html>

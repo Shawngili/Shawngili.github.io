@@ -2,195 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>My Future Projects</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Repository</title>
   <style>
-    :root {
-      --bg: #0f172a;
-      --card: #111827;
-      --accent: #38bdf8;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-    }
-    * {
-      box-sizing: border-box;
+    body {
       margin: 0;
       padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #222;
     }
-    body {
-      background: radial-gradient(circle at top, #1f2937 0, #020617 55%);
-      color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    header {
+      background: #222;
+      color: #fff;
       padding: 2rem;
+      text-align: center;
     }
-    .shell {
+    main {
       max-width: 800px;
-      width: 100%;
-      background: linear-gradient(145deg, #020617, #020617 40%, #0b1120 100%);
-      border-radius: 18px;
-      border: 1px solid #1f2937;
-      box-shadow:
-        0 18px 45px rgba(0, 0, 0, 0.7),
-        0 0 0 1px rgba(148, 163, 184, 0.08);
-      padding: 2rem 2.4rem 2.2rem;
-    }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.25rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      background: rgba(15, 23, 42, 0.8);
-      color: var(--muted);
-      font-size: 0.75rem;
-      margin-bottom: 1.2rem;
-    }
-    .badge-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.25);
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     h1 {
-      font-size: 2rem;
-      margin-bottom: 0.4rem;
-      letter-spacing: 0.02em;
+      margin-top: 0;
     }
-    .subtitle {
-      font-size: 0.95rem;
-      color: var(--muted);
-      margin-bottom: 1.6rem;
-      max-width: 32rem;
+    ul {
+      line-height: 1.7;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
-      gap: 1.6rem;
-    }
-    .card {
-      background: radial-gradient(circle at top left, #1e293b 0, #020617 55%);
-      border-radius: 14px;
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      padding: 1.2rem 1.3rem;
-    }
-    .card h2 {
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--muted);
-      margin-bottom: 0.7rem;
-    }
-    .card p {
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: #555;
       font-size: 0.9rem;
-      color: #e5e7eb;
-      line-height: 1.5;
-    }
-    .list {
-      list-style: none;
-      margin-top: 0.6rem;
-      font-size: 0.9rem;
-    }
-    .list li {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.35rem 0;
-      color: var(--muted);
-    }
-    .bullet {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: var(--accent);
-    }
-    .footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 1.8rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-    .pill {
-      padding: 0.25rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-    }
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    @media (max-width: 720px) {
-      .shell {
-        padding: 1.6rem 1.4rem 1.8rem;
-      }
-      .grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      h1 {
-        font-size: 1.6rem;
-      }
     }
   </style>
 </head>
 <body>
-  <main class="shell">
-    <div class="badge">
-      <span class="badge-dot"></span>
-      <span>GitHub sandbox · extra credit repo</span>
-    </div>
+  <header>
+    <h1>Project Repository</h1>
+    <p>A collection of works, experiments, and development files.</p>
+  </header>
 
-    <h1>Future Projects Playground</h1>
-    <p class="subtitle">
-      This repository is a staging area for upcoming experiments, side projects, and ideas in progress.
-      It exists right now mainly for extra credit—but it will grow into something real over time.
+  <main>
+    <h2>Overview</h2>
+    <p>
+      This repository contains various files, prototypes, and project materials.
+      It serves as a workspace for organizing and storing development-related content.
     </p>
 
-    <section class="grid">
-      <article class="card">
-        <h2>About this repo</h2>
-        <p>
-          This is a general-purpose space for trying out new concepts, testing code, and
-          organizing future projects. As things evolve, you might find:
-        </p>
-        <ul class="list">
-          <li><span class="bullet"></span><span>Small prototypes and proof-of-concept apps</span></li>
-          <li><span class="bullet"></span><span>Practice code for classes and personal learning</span></li>
-          <li><span class="bullet"></span><span>Experiments with new tools, frameworks, or APIs</span></li>
-        </ul>
-      </article>
+    <h2>Contents</h2>
+    <ul>
+      <li>Source code and scripts</li>
+      <li>Documentation and notes</li>
+      <li>Work-in-progress features</li>
+      <li>Archived or experimental files</li>
+    </ul>
 
-      <article class="card">
-        <h2>What to expect</h2>
-        <p>
-          Right now, there may not be much here yet. Over time, this repo can turn into:
-        </p>
-        <ul class="list">
-          <li><span class="bullet"></span><span>A mini portfolio of small projects</span></li>
-          <li><span class="bullet"></span><span>Reusable snippets and utilities</span></li>
-          <li><span class="bullet"></span><span>Notes and documentation for future work</span></li>
-        </ul>
-      </article>
-    </section>
-
-    <footer class="footer">
-      <span class="pill">Status: in progress</span>
-      <span>
-        View the code on
-        <a href="https://github.com/your-username/your-repo-name" target="_blank" rel="noreferrer">
-          GitHub
-        </a>
-      </span>
-    </footer>
+    <h2>Usage</h2>
+    <p>
+      Files in this repository may be updated, replaced, or reorganized over time.
+      Visitors can browse the directory structure to view current materials.
+    </p>
   </main>
+
+  <footer>
+    © 2026 — Repository maintained on GitHub
+  </footer>
 </body>
 </html>

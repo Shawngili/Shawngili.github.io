@@ -13,7 +13,8 @@
     --muted: #94a3b8;
     --accent: #38bdf8;
     --accent2: #818cf8;
-    --radius: 14px;
+    --glow: rgba(56, 189, 248, 0.45);
+    --radius: 16px;
   }
 
   * {
@@ -30,24 +31,33 @@
     overflow-x: hidden;
   }
 
-  /* HERO */
+  /* PARALLAX HERO */
   header {
-    padding: 6rem 1rem;
+    padding: 7rem 1rem;
     text-align: center;
     background: linear-gradient(135deg, var(--accent2), var(--accent));
+    background-size: 200% 200%;
+    animation: gradientShift 8s ease infinite;
     color: white;
-    animation: fadeIn 1s ease-out;
+    position: relative;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 
   header h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
+    text-shadow: 0 0 12px rgba(0,0,0,0.4);
   }
 
   header p {
     font-size: 1.2rem;
-    opacity: 0.9;
+    opacity: 0.95;
   }
 
   /* MAIN WRAPPER */
@@ -60,108 +70,22 @@
   /* SECTION CARD */
   .card {
     background: var(--card);
-    padding: 2rem;
+    padding: 2.2rem;
     border-radius: var(--radius);
-    margin-bottom: 2rem;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-    animation: slideUp 0.7s ease-out;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 0 0 1px #1e3a5f, 0 8px 25px rgba(0,0,0,0.25);
+    animation: fadeUp 0.7s ease-out;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
 
-  h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    background: linear-gradient(90deg, var(--accent), var(--accent2));
-    -webkit-background-clip: text;
-    color: transparent;
-    font-weight: 700;
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px var(--glow), 0 12px 30px rgba(0,0,0,0.35);
   }
 
-  p, li {
-    color: var(--muted);
-    font-size: 1.05rem;
-  }
-
-  ul {
-    margin-top: 0.5rem;
-    padding-left: 1.2rem;
-  }
-
-  /* CONTACT */
-  .contact-info p {
-    margin-bottom: 0.5rem;
-  }
-
-  /* ANIMATIONS */
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-  @keyframes slideUp {
+  @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
 
-</style>
-</head>
-
-<body>
-
-<header>
-  <h1>Shawn</h1>
-  <p>Developer • Problem Solver • Builder</p>
-</header>
-
-<div class="container">
-
-  <!-- ABOUT ME -->
-  <section class="card">
-    <h2>About Me</h2>
-    <p>
-      <!-- FILL THIS IN -->
-      Write a short intro about yourself here.  
-      Example: “I’m an ICS major at UH Mānoa focused on building clean, modern software and improving my development skills through hands‑on work.”
-    </p>
-  </section>
-
-  <!-- WHAT I DO -->
-  <section class="card">
-    <h2>What I Do</h2>
-    <ul>
-      <!-- FILL THESE IN -->
-      <li>Software development and coding practice</li>
-      <li>Building small tools, utilities, and experiments</li>
-      <li>Learning new technologies and improving fundamentals</li>
-      <li>Debugging, problem‑solving, and exploring new ideas</li>
-    </ul>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="card">
-    <h2>Skills & Tools</h2>
-    <ul>
-      <!-- FILL THESE IN -->
-      <li>Java, Python, HTML/CSS, JavaScript</li>
-      <li>Git, GitHub, VS Code, Linux</li>
-      <li>Debugging & problem‑solving</li>
-      <li>Software design fundamentals</li>
-    </ul>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="card contact-info">
-    <h2>Contact</h2>
-    <p><strong>Email:</strong> <!-- your email here --></p>
-    <p><strong>GitHub:</strong> <!-- your GitHub link here --></p>
-    <p><strong>LinkedIn:</strong> <!-- your LinkedIn here --></p>
-    <p><strong>Location:</strong> Honolulu, HI</p>
-  </section>
-
-</div>
-
-<footer style="text-align:center; padding:2rem; color:#64748b;">
-  © 2026 — Shawn’s Portfolio
-</footer>
-
-</body>
-</html>
+  /* SECTION TITLES WITH ANIM

@@ -144,9 +144,65 @@
 <body>
 
 <header>
-  <h1>Shawn</h1>
-  <p>Developer • Problem Solver • Builder</p>
+  <h1 class="title-animated">
+    <span id="typing"></span>
+  </h1>
+  <p class="subtitle">Developer • Problem Solver • Builder</p>
 </header>
+
+<style>
+  /* Typing animation */
+  #typing {
+    border-right: 3px solid rgba(255,255,255,0.75);
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: typing 3s steps(20), blink .75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes blink {
+    50% { border-color: transparent }
+  }
+
+  .title-animated {
+    font-size: 3.4rem;
+    font-weight: 900;
+    text-shadow: 0 0 18px rgba(0,0,0,0.4);
+    margin-bottom: 0.5rem;
+    animation: floaty 4s ease-in-out infinite;
+  }
+
+  @keyframes floaty {
+    0%, 100% { transform: translateY(0) }
+    50% { transform: translateY(-6px) }
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    letter-spacing: 0.5px;
+  }
+</style>
+
+<script>
+  // Typing text
+  const text = "Shawn";
+  let i = 0;
+  function type() {
+    if (i < text.length) {
+      document.getElementById("typing").textContent += text.charAt(i);
+      i++;
+      setTimeout(type, 120);
+    }
+  }
+  type();
+</script>
+
 
 <div class="container">
 
@@ -195,9 +251,69 @@
 
 </div>
 
-<footer>
-  © 2026 — Shawn’s Portfolio
+<footer class="footer">
+  <div class="footer-content">
+    <h3>Connect With Me</h3>
+    <p>Email: <!-- your email here --></p>
+    <p>GitHub: <!-- your GitHub link here --></p>
+    <p>LinkedIn: <!-- your LinkedIn here --></p>
+
+    <div class="footer-divider"></div>
+
+    <p class="footer-small">© 2026 — Shawn’s Portfolio</p>
+    <a href="#" class="back-to-top">Back to Top ↑</a>
+  </div>
 </footer>
+
+<style>
+  .footer {
+    padding: 3rem 1rem;
+    text-align: center;
+    background: #0b1220;
+    margin-top: 3rem;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
+  }
+
+  .footer-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .footer-content p {
+    color: var(--muted);
+    margin: 0.3rem 0;
+  }
+
+  .footer-divider {
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    margin: 1.5rem auto;
+    border-radius: 2px;
+    box-shadow: 0 0 12px var(--glow);
+  }
+
+  .footer-small {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 1rem;
+  }
+
+  .back-to-top {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .back-to-top:hover {
+    color: var(--accent2);
+  }
+</style>
+
 
 </body>
 </html>

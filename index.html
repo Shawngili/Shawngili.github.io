@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shawn — Developer Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --text: #1e293b;
+      --muted: #64748b;
+      --accent: #2563eb;
+      --card: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* HERO SECTION */
+    header {
+      padding: 4rem 1rem;
+      text-align: center;
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: white;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #e2e8f0;
+    }
+
+    /* CONTENT WRAPPER */
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: var(--card);
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      color: var(--muted);
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    ul li {
+      padding-left: 1.2rem;
+      position: relative;
+      margin-bottom: 0.5rem;
+    }
+
+    ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Shawn</h1>
+    <p>Developer • Builder • Problem Solver</p>
+  </header>
+
+  <main>
+    <h2>About Me</h2>
+    <p>
+      I'm an ICS major at UH Mānoa with a passion for building clean, modern, and functional software.
+      I enjoy working on projects that blend creativity, logic, and real-world problem solving.
+    </p>
+
+    <h2>Projects</h2>
+    <ul>
+      <li>Java applications and scripts</li>
+      <li>Web development experiments</li>
+      <li>Coursework prototypes and demos</li>
+      <li>Personal tools and utilities</li>
+    </ul>
+
+    <h2>Current Focus</h2>
+    <p>
+      Improving my development workflow, building stronger fundamentals, and creating a polished portfolio
+      that reflects my growth as a developer.
+    </p>
+  </main>
+
+  <footer>
+    © 2026 — Shawn’s Portfolio
+  </footer>
+
+</body>
+</html>

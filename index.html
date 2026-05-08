@@ -88,4 +88,116 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  /* SECTION TITLES WITH ANIM
+  /* SECTION TITLES WITH ANIMATED UNDERLINE */
+  h2 {
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+    transition: width 0.4s ease;
+  }
+
+  .card:hover h2::after {
+    width: 100%;
+  }
+
+  p, li {
+    color: var(--muted);
+    font-size: 1.05rem;
+  }
+
+  ul {
+    margin-top: 0.5rem;
+    padding-left: 1.2rem;
+  }
+
+  /* CONTACT */
+  .contact-info p {
+    margin-bottom: 0.5rem;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    color: #64748b;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Shawn</h1>
+  <p>Developer • Problem Solver • Builder</p>
+</header>
+
+<div class="container">
+
+  <!-- ABOUT ME -->
+  <section class="card">
+    <h2>About Me</h2>
+    <p>
+      <!-- FILL THIS IN -->
+      Write a short intro about yourself here.  
+      Example: “I’m an ICS major at UH Mānoa focused on building clean, modern software and improving my development skills through hands‑on work.”
+    </p>
+  </section>
+
+  <!-- WHAT I DO -->
+  <section class="card">
+    <h2>What I Do</h2>
+    <ul>
+      <!-- FILL THESE IN -->
+      <li>Software development and coding practice</li>
+      <li>Building small tools, utilities, and experiments</li>
+      <li>Learning new technologies and improving fundamentals</li>
+      <li>Debugging, problem‑solving, and exploring new ideas</li>
+    </ul>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="card">
+    <h2>Skills & Tools</h2>
+    <ul>
+      <!-- FILL THESE IN -->
+      <li>Java, Python, HTML/CSS, JavaScript</li>
+      <li>Git, GitHub, VS Code, Linux</li>
+      <li>Debugging & problem‑solving</li>
+      <li>Software design fundamentals</li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="card contact-info">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> <!-- your email here --></p>
+    <p><strong>GitHub:</strong> <!-- your GitHub link here --></p>
+    <p><strong>LinkedIn:</strong> <!-- your LinkedIn here --></p>
+    <p><strong>Location:</strong> Honolulu, HI</p>
+  </section>
+
+</div>
+
+<footer>
+  © 2026 — Shawn’s Portfolio
+</footer>
+
+</body>
+</html>
